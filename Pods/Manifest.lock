@@ -1,0 +1,39 @@
+PODS:
+  - Nuke (8.4.1)
+  - PKHUD (5.2.1)
+  - RxBlocking (5.0.0):
+    - RxSwift (~> 5)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - Nuke
+  - PKHUD (~> 5.2.0)
+  - RxBlocking (= 5.0.0)
+  - RxCocoa (= 5.0.0)
+  - RxSwift (= 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Nuke
+    - PKHUD
+    - RxBlocking
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Nuke: d780e3507a86b86c589ab3cc5cd302d5456f06fb
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: e54cee3238347c17e089d60df561dedd1d5163c2
+
+COCOAPODS: 1.8.4
