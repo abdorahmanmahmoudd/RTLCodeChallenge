@@ -5,10 +5,9 @@
 //  Created by Abdorahman on 30/05/2020.
 //  Copyright © 2020 Abdorahman. All rights reserved.
 //
-
-import Foundation
 import UIKit
 
+/// A protocl used to inject the view model into the view controller
 protocol Injectable {
     
     /// The type that indicates what we will inject

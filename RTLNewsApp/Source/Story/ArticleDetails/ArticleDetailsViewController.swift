@@ -40,7 +40,7 @@ final class ArticleDetailsViewController: BaseViewController {
     private func configureArticleDetailsView() {
         
         guard let articleDetailsView = ArticleView().loadNib() as? ArticleView else {
-            fatalError("Couldn't embed ArticleDetails View")
+            fatalError("Couldn't embed ArticleView")
         }
         scrollView.addSubview(articleDetailsView)
         articleDetailsView.activateConstraints(for: scrollView)
