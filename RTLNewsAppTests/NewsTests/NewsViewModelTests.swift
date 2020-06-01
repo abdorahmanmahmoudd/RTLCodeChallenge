@@ -95,7 +95,10 @@ class NewsViewModelTests: XCTestCase {
         }
         
         /// When
-        viewModel.getNextPage()
+        viewModel.getNews()
+        if viewModel.shouldGetNextPage(withCellIndex: 0) {
+            viewModel.getNextPage()
+        }
     }
     
     func testRefreshNews() {
@@ -119,6 +122,29 @@ class NewsViewModelTests: XCTestCase {
         
         /// When
         viewModel.refreshNews()
+    }
+    
+    func testNewsItemAt() {
+        
+        /// Given
+        let viewModel = newsViewModel(responseType: .success)
+        
+        /// Then
+        viewModel.refreshState = {
+            switch viewModel.state {
+            case .result:
+                /// Then
+                XCTAssertNotNil(viewModel.item(at: IndexPath(row: 0, section: 0)))
+            case .error:
+                /// Then
+                XCTAssert(false)
+            default:
+                break
+            }
+        }
+        
+        /// When
+        viewModel.getNews()
     }
 
 }

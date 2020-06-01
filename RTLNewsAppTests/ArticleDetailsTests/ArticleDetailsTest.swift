@@ -7,27 +7,32 @@
 //
 
 import XCTest
+import RxSwift
+@testable import RTLNewsApp
 
 class ArticleDetailsTest: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private func getArticle() -> Article? {
+        return MockResponseData().mockedNews()?.articles?.first
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testArticleDetailsView() {
+        
+        /// Given
+        let article = getArticle()
+        XCTAssertNotNil(article)
+        
+        /// Given
+        let articleViewModel = ArticleDetailsViewModel(article: article!)
+        XCTAssertNotNil(articleViewModel)
+        
+        /// When
+        let articleView = ArticleView.init().loadNib() as? ArticleView
+        XCTAssertNotNil(articleView)
+        
+        /// Then
+        articleView?.configure(with: article!)
+        XCTAssertTrue(true)
     }
 
 }
