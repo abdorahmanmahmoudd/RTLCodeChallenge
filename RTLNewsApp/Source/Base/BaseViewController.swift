@@ -9,10 +9,26 @@
 import UIKit
 import PKHUD
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     /// Error View Controller
     lazy var errorViewController = ErrorViewController()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        /// Enable swipe back gesture
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+
+    /// Disable pop gesture in one situation:
+    /// 1) when we are on the root view controller
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard gestureRecognizer == navigationController?.interactivePopGestureRecognizer else {
+            return true
+        }
+        return (navigationController?.viewControllers.count ?? 0) > 1 ? true : false
+    }
     
     /// Show and hide loading indicator
     func showLoadingIndicator(visible: Bool) {
