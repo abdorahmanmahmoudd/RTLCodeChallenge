@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  RTLNewsApp
+
+  Created by Abdorahman on 30/05/2020.
+  Copyright © 2020 Abdorahman. All rights reserved.
+*/
+
+// MARK: General
+"GENERAL_ERROR_DESCRIPTION" = "Countered a problem!";
+"RTL_NEWS" = "RTL nieuws";
+"GENERAL_EMPTY_STATE_ERROR" = "No results";
+"ERROR_VIEW_BUTTON_TITLE" = "Try again";

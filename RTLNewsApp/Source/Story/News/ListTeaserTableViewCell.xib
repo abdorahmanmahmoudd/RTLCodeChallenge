@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="106" id="9EZ-oK-fIO" customClass="ListTeaserTableViewCell" customModule="RTLNewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9EZ-oK-fIO" id="rFi-lg-vZ9">
+                <rect key="frame" x="0.0" y="0.0" width="454" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVN-88-Ofj">
+                        <rect key="frame" x="374" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="80" id="NgQ-OS-83j"/>
+                            <constraint firstAttribute="width" priority="999" constant="80" id="h79-IC-J6h"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo4-KT-UCM">
+                        <rect key="frame" x="8" y="8" width="350" height="64"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xVN-88-Ofj" secondAttribute="trailing" id="36E-sV-ocV"/>
+                    <constraint firstAttribute="bottom" secondItem="xVN-88-Ofj" secondAttribute="bottom" id="3yu-Fn-zVx"/>
+                    <constraint firstAttribute="bottom" secondItem="Fo4-KT-UCM" secondAttribute="bottom" constant="8" id="9hN-lQ-ewV"/>
+                    <constraint firstItem="xVN-88-Ofj" firstAttribute="top" secondItem="rFi-lg-vZ9" secondAttribute="top" id="XR4-Uj-Gxc"/>
+                    <constraint firstItem="Fo4-KT-UCM" firstAttribute="top" secondItem="rFi-lg-vZ9" secondAttribute="top" constant="8" id="cXm-HZ-jWv"/>
+                    <constraint firstItem="xVN-88-Ofj" firstAttribute="leading" secondItem="Fo4-KT-UCM" secondAttribute="trailing" constant="16" id="uQc-8D-xI8"/>
+                    <constraint firstItem="Fo4-KT-UCM" firstAttribute="leading" secondItem="rFi-lg-vZ9" secondAttribute="leading" constant="8" id="vFz-Vs-Cpi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="teaserImage" destination="xVN-88-Ofj" id="C7q-iC-W8O"/>
+                <outlet property="teaserTitle" destination="Fo4-KT-UCM" id="DF7-Vm-0VH"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="-33.482142857142854"/>
+        </tableViewCell>
+    </objects>
+</document>
