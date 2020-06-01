@@ -22,17 +22,11 @@ final class ArticleDetailsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        styleNavigationItem()
-
         /// Embed and constraint the scroll view
         configureScrollView()
         
         /// Embed and configure the `ArticleView`
         configureArticleDetailsView()
-    }
-    
-    private func styleNavigationItem() {
-        navigationController?.navigationBar.topItem?.title = ""
     }
     
     private func configureScrollView() {

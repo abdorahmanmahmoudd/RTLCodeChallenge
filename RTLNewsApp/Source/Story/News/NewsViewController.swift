@@ -38,9 +38,12 @@ final class NewsViewController: BaseViewController  {
         viewModel.getNews()
     }
     
-    /// Set navigation bar title
+    /// Set navigation bar style
     private func styleNavigationItem() {
-        title = "RTL_NEWS".localized
+        title = "RTL_NEWS_TITLE".localized
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.blue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
     }
     
     /// Configure News table view
